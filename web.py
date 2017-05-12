@@ -39,4 +39,4 @@ def page_not_found(e):
 
 
 if __name__ == "__main__":
-    job_application_followup.run()
+    job_application_followup.run(debug=True)
