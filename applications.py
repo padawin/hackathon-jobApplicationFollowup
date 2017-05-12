@@ -1,6 +1,12 @@
 from datetime import datetime
 
 
+class ApplicationStatus:
+    PENDING = 'pending'
+    REJECTED = 'rejected'
+    ACCEPTED = 'accepted'
+
+
 class Application:
     def __init__(self, application_id, job_position_id, candidate_name, candidate_status, date_applied=None):
         self.application_id = application_id
