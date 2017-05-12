@@ -25,15 +25,21 @@ let Utils = (function () {
             html = html.split("{{" + field.toUpperCase() + "}}").join(data[field]);
         }
 
-        let reg = /{\?{([^\s]+) ([a-z_]+)}}/;
-        let match;
-        while (match = reg.exec(html)) {
+        let regIf = /{\?{([^\s]+) ([a-z_]+)}}/;
+        let matchIf;
+        while (match = regIf.exec(html)) {
             if (data[match[1]]) {
                 html = html.replace(match[0], $("#" + match[2]).html());
             }
             else {
                 html = html.replace(match[0], "");
             }
+        }
+
+        let regSub = /{t{([a-z_]+)}}/;
+        let matchSub;
+        while (match = regSub.exec(html)) {
+            html = html.replace(match[0], $("#" + match[1]).html());
         }
 
         return $.parseHTML(html);
