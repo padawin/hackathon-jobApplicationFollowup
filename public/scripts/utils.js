@@ -1,7 +1,7 @@
 let Utils = (function () {
     let Utils = {};
 
-    let getUrlParameter = function getUrlParameter(sParam) {
+    let getUrlParameter = function (sParam) {
         let sPageURL = decodeURIComponent(window.location.search.substring(1)),
             sURLVariables = sPageURL.split('&'),
             sParameterName;
