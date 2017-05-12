@@ -1,26 +1,21 @@
-from flask import Flask, send_from_directory, jsonify
+from flask import Flask, send_from_directory
+from flask_restful import Api
 
 from json_encoder import JSONEncoder
 
-from mock_job_positions import mock_job_positions
+from mock_job_positions import MockJobPositionsList, MockJobPositions
 
 job_application_followup = Flask(__name__, static_folder='public', static_url_path='')
-job_application_followup.json_encoder = JSONEncoder
+job_application_followup.config['RESTFUL_JSON'] = {'cls': JSONEncoder}
+
+api = Api(job_application_followup, '/api')
+api.add_resource(MockJobPositionsList, '/positions')
+api.add_resource(MockJobPositions, '/positions/<int:job_position_id>')
 
 
 @job_application_followup.route('/')
 def root():
     return "Hello, world"
-
-
-@job_application_followup.route('/api/positions')
-def positions():
-    return jsonify(mock_job_positions)
-
-
-@job_application_followup.route('/api/positions/<int:position_id>')
-def position(position_id):
-    return jsonify(mock_job_positions[position_id])
 
 
 @job_application_followup.errorhandler(404)
