@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <link rel="icon" href="favicon.ico">
+
+    <title>Hackathon Job Application Follow Up</title>
+
+    <link rel="stylesheet"
+          href="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/4.0.0-alpha.6/css/bootstrap.min.css"
+          integrity="sha256-rr9hHBQ43H7HSOmmNkxzQGazS/Khx+L8ZRHteEY1tQ4="
+          crossorigin="anonymous">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css"
+          integrity="sha256-eZrrJcwDc/3uDhsdt61sL2oOBY362qM3lon1gyExkL0="
+          crossorigin="anonymous">
+    <link href="/css/hackathon.css" rel="stylesheet">
+</head>
+<body>
+<nav class="navbar navbar-toggleable-md navbar-inverse fixed-top">
+    <div class="container" id="nav"></div>
+</nav>
+
+<div class="container">
+    <h1>Position Creation</h1>
+
+    <form id="position_form" method="post" class="card">
+        <div class="card-block">
+            <div class="form-group">
+                <label for="jobTitle">Job Title:</label>
+                <div class="input-group input-group-lg">
+                    <span class="input-group-addon"><i class="fa fa-user"></i></span>
+                    <input type="text" class="form-control form-control-lg" id="jobTitle" name="jobTitle"
+                           required>
+                </div>
+            </div>
+            <div class="form-group">
+                <label for="jobDescription">Job Description:</label>
+                <div class="input-group textarea">
+                    <span class="input-group-addon"><i class="fa fa-info-circle"></i></span>
+                    <textarea class="form-control" id="jobDescription" name="jobDescription" rows="8"></textarea>
+                </div>
+            </div>
+            <div class="form-group">
+                <button type="submit" class="btn btn-primary">Submit</button>
+            </div>
+        </div>
+    </form>
+
+</div>
+
+<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"
+        integrity="sha256-hwg4gsxgFZhOsEEamdOYGBf13FyQuiTwlAQgxVSNgt4="
+        crossorigin="anonymous"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/tether/1.4.0/js/tether.min.js"
+        integrity="sha384-DztdAPBWPRXSA/3eYEEUWrWCy7G5KFbe8fFjk5JAIxUYHKkDx6Qin1DkWx51bBrb"
+        crossorigin="anonymous"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/4.0.0-alpha.6/js/bootstrap.min.js"
+        integrity="sha256-+kIbbrvS+0dNOjhmQJzmwe/RILR/8lb/+4+PUNVW09k="
+        crossorigin="anonymous"></script>
+
+    <script type="text/javascript" src="/scripts/jobPositionForm.js"></script>
+
+<script>
+    $("nav").load("/include/header-company.html");
+    $(function () {
+        $('[data-toggle="tooltip"]').tooltip()
+    })
+</script>
+</body>
+</html>

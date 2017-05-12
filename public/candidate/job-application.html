@@ -13,7 +13,7 @@
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css"
           integrity="sha256-eZrrJcwDc/3uDhsdt61sL2oOBY362qM3lon1gyExkL0="
           crossorigin="anonymous">
-    <link href="css/hackathon.css" rel="stylesheet">
+    <link href="/css/hackathon.css" rel="stylesheet">
 </head>
 <body>
 <nav class="navbar navbar-toggleable-md navbar-inverse fixed-top">
@@ -45,24 +45,34 @@
 </nav>
 
 <div class="container">
-    <h1>Position Creation</h1>
+    <h1>Job Application</h1>
 
-    <form id="position_form" method="post" class="card">
+    <form id="application_form" method="post" class="card">
         <div class="card-block">
             <div class="form-group">
-                <label for="jobTitle">Job Title:</label>
+                <label for="candidateName">Candidate Name:</label>
                 <div class="input-group input-group-lg">
                     <span class="input-group-addon"><i class="fa fa-user"></i></span>
-                    <input type="text" class="form-control form-control-lg" id="jobTitle" name="jobTitle"
+                    <input type="text" class="form-control form-control-lg" id="candidateName" name="candidateName"
                            required>
                 </div>
             </div>
             <div class="form-group">
-                <label for="jobDescription">Job Description:</label>
-                <div class="input-group textarea">
-                    <span class="input-group-addon"><i class="fa fa-info-circle"></i></span>
-                    <textarea class="form-control" id="jobDescription" name="jobDescription" rows="8"></textarea>
+                <label for="candidateEmail">Candidate Email:</label>
+                <div class="input-group">
+                    <span class="input-group-addon"><i class="fa fa-at"></i></span>
+                    <input type="email" class="form-control" id="candidateEmail" name="candidateEmail" required>
                 </div>
+            </div>
+            <div class="form-group">
+                <label for="candidateCv">Candidate CV:</label>
+                <label class="custom-file">
+                    <div class="input-group">
+                        <span class="input-group-addon"><i class="fa fa-file-text-o"></i></span>
+                        <input type="file" id="candidateCv" name="candidateCv" class="custom-file-input" required>
+                    </div>
+                    <span class="custom-file-control"></span>
+                </label>
             </div>
             <div class="form-group">
                 <button type="submit" class="btn btn-primary">Submit</button>
@@ -82,12 +92,12 @@
         integrity="sha256-+kIbbrvS+0dNOjhmQJzmwe/RILR/8lb/+4+PUNVW09k="
         crossorigin="anonymous"></script>
 
-    <script type="text/javascript" src="./scripts/jobPositionForm.js"></script>
-
+    <script type="text/javascript" src="/scripts/utils.js"></script>
+    <script type="text/javascript" src="/scripts/jobApplicationForm.js"></script>
 <script>
     $(function () {
-        $('[data-toggle="tooltip"]').tooltip()
-    })
+        $('[data-toggle="tooltip"]').tooltip();
+    });
 </script>
 </body>
 </html>

@@ -33,7 +33,7 @@ $('#application_form').submit(function(event) {
             contentType: 'application/json; charset=utf-8',
             dataType: 'json',
             success: function () {
-                window.location.href = '/application-list.html'
+                window.location.href = '/candidate/application-list.html'
             }
     });
 });

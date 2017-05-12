@@ -13,39 +13,23 @@
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css"
           integrity="sha256-eZrrJcwDc/3uDhsdt61sL2oOBY362qM3lon1gyExkL0="
           crossorigin="anonymous">
-    <link href="css/hackathon.css" rel="stylesheet">
+    <link href="/css/hackathon.css" rel="stylesheet">
 </head>
 <body>
     <nav class="navbar navbar-toggleable-md navbar-inverse fixed-top">
-        <div class="container">
-            <button class="navbar-toggler navbar-toggler-right" type="button" data-toggle="collapse"
-                    data-target="#navbarsExampleDefault">
-                <span class="navbar-toggler-icon"></span>
-            </button>
-            <a class="navbar-brand" href="#">Hackathon</a>
-
-            <div class="collapse navbar-collapse" id="navbarsExampleDefault">
-                <ul class="navbar-nav mr-auto">
-                    <li class="nav-item active">
-                        <a class="nav-link" href="#">Home</a>
-                    </li>
-                    <li class="nav-item">
-                        <a class="nav-link" href="#">Link</a>
-                    </li>
-                    <li class="nav-item dropdown">
-                        <a class="nav-link dropdown-toggle" href="#" id="dropdown01" data-toggle="dropdown">Dropdown</a>
-                        <div class="dropdown-menu">
-                            <a class="dropdown-item" href="#">Link</a>
-                            <a class="dropdown-item" href="#">Link</a>
-                        </div>
-                    </li>
-                </ul>
-            </div>
-        </div>
+        <div class="container" id="nav"></div>
     </nav>
 
     <div class="container">
         <div id="position-container"></div>
+
+        <hr>
+        <h2>Applications for this position</h2>
+
+        <table class="table table-hover">
+            <tbody id="applications-container">
+            </tbody>
+        </table>
     </div>
 
     <script type="text/template" id="position-template">
@@ -66,17 +50,52 @@
             <div class="card-block">
                 <p>{{DESCRIPTION}}</p>
             </div>
-
             <div class="card-footer">
                 <ul class="nav nav-pills card-header-pills">
-                  <li class="nav-item">
-                      <a class="nav-link active" href="./job-application.html?id={{JOB_POSITION_ID}}">
-                          Apply for position
-                      </a>
-                  </li>
+                    <li class="nav-item">
+                        <a id="position-withdraw-button" class="nav-link btn-danger"
+                           href="/api/positions/{{JOB_POSITION_ID}}">
+                           Withdraw Position
+                        </a>
+                    </li>
                 </ul>
             </div>
         </div>
+    </script>
+
+    <script type="text/template" id="pending_indicator_template">
+        <i class="fa fa-circle pending" data-toggle="tooltip" data-placement="top"
+           title="This application is pending review"></i>
+    </script>
+
+    <script type="text/template" id="accepted_indicator_template">
+        <i class="fa fa-circle approved" data-toggle="tooltip" data-placement="top"
+           title="This application is accepted"></i>
+    </script>
+
+    <script type="text/template" id="rejected_indicator_template">
+        <i class="fa fa-circle rejected" data-toggle="tooltip" data-placement="top"
+           title="This application is rejected"></i>
+    </script>
+
+    <script type="text/template" id="application-template">
+        <tr data-row="{{APPLICATION_ID}}">
+            <td class="status-cell">
+                {?{is_pending pending_indicator_template}}
+                {?{is_accepted accepted_indicator_template}}
+                {?{is_rejected rejected_indicator_template}}
+            </td>
+            <td>
+                <h3>{{CANDIDATE_NAME}}</h3>
+                <p class="m-0"><small>Submitted application {{DATE_APPLIED}}</small></p>
+            </td>
+            <td class="button-cell">
+                <button type="button" class="btn btn-primary" data-toggle="tooltip" data-placement="top"
+                        title="View application"><i class="fa fa-eye"></i></button>
+                <button type="button" class="btn btn-danger" data-toggle="tooltip" data-placement="top"
+                        title="Reject application"><i class="fa fa-times"></i></button>
+            </td>
+        </tr>
     </script>
 
     <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"
@@ -96,11 +115,14 @@
             crossorigin="anonymous"></script>
 
     <script>
+        $("nav").load("/include/header-company.html");
         $(function () {
             $('[data-toggle="tooltip"]').tooltip()
         })
     </script>
-    <script type="text/javascript" src="./scripts/utils.js"></script>
-    <script type="text/javascript" src="./scripts/jobPosition.js"></script>
+    <script type="text/javascript" src="/scripts/utils.js"></script>
+    <script type="text/javascript" src="/scripts/positionDeletion.js"></script>
+    <script type="text/javascript" src="/scripts/jobPosition.js"></script>
+    <script type="text/javascript" src="/scripts/applications.js"></script>
 </body>
 </html>

@@ -13,35 +13,11 @@
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css"
           integrity="sha256-eZrrJcwDc/3uDhsdt61sL2oOBY362qM3lon1gyExkL0="
           crossorigin="anonymous">
-    <link href="css/hackathon.css" rel="stylesheet">
+    <link href="/css/hackathon.css" rel="stylesheet">
 </head>
 <body>
     <nav class="navbar navbar-toggleable-md navbar-inverse fixed-top">
-        <div class="container">
-            <button class="navbar-toggler navbar-toggler-right" type="button" data-toggle="collapse"
-                    data-target="#navbarsExampleDefault">
-                <span class="navbar-toggler-icon"></span>
-            </button>
-            <a class="navbar-brand" href="#">Hackathon</a>
-
-            <div class="collapse navbar-collapse" id="navbarsExampleDefault">
-                <ul class="navbar-nav mr-auto">
-                    <li class="nav-item active">
-                        <a class="nav-link" href="#">Home</a>
-                    </li>
-                    <li class="nav-item">
-                        <a class="nav-link" href="#">Link</a>
-                    </li>
-                    <li class="nav-item dropdown">
-                        <a class="nav-link dropdown-toggle" href="#" id="dropdown01" data-toggle="dropdown">Dropdown</a>
-                        <div class="dropdown-menu">
-                            <a class="dropdown-item" href="#">Link</a>
-                            <a class="dropdown-item" href="#">Link</a>
-                        </div>
-                    </li>
-                </ul>
-            </div>
-        </div>
+        <div class="container" id="nav"></div>
     </nav>
 
     <div class="container">
@@ -65,7 +41,7 @@
                 <p class="m-0"><small>Posted {{DATE_POSTED}}</small></p>
             </td>
             <td class="button-cell">
-                <a href="./job-position-admin.html?id={{JOB_POSITION_ID}}" class="btn btn-primary">View</a>
+                <a href="./job-position.html?id={{JOB_POSITION_ID}}" class="btn btn-primary">View</a>
                 <a href="./job-position-form.html?id={{JOB_POSITION_ID}}" class="btn btn-warning">
                     <i class="fa fa-pencil"></i>
                 </a>
@@ -100,12 +76,13 @@
             crossorigin="anonymous"></script>
 
     <script>
+        $("nav").load("/include/header-company.html");
         $(function () {
             $('[data-toggle="tooltip"]').tooltip()
         })
     </script>
-    <script type="text/javascript" src="./scripts/utils.js"></script>
-    <script type="text/javascript" src="./scripts/positionDeletion.js"></script>
-    <script type="text/javascript" src="./scripts/jobPositions.js"></script>
+    <script type="text/javascript" src="/scripts/utils.js"></script>
+    <script type="text/javascript" src="/scripts/positionDeletion.js"></script>
+    <script type="text/javascript" src="/scripts/jobPositions.js"></script>
 </body>
 </html>

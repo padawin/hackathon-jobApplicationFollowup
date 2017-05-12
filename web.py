@@ -30,7 +30,7 @@ api.add_resource(Applications, '/positions/<int:job_position_id>/applications/<i
 
 @job_application_followup.route('/')
 def root():
-    return "Hello, world"
+    return send_from_directory(job_application_followup.static_folder, 'index.html')
 
 
 @job_application_followup.errorhandler(404)
@@ -39,4 +39,4 @@ def page_not_found(e):
 
 
 if __name__ == "__main__":
-    job_application_followup.run()
+    job_application_followup.run(debug=True)
