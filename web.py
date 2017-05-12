@@ -30,7 +30,7 @@ api.add_resource(Applications, '/positions/<int:job_position_id>/applications/<i
 
 @job_application_followup.route('/')
 def root():
-    return "Hello, world"
+    return send_from_directory(job_application_followup.static_folder, 'index.html')
 
 
 @job_application_followup.errorhandler(404)
