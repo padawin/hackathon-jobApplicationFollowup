@@ -36,6 +36,7 @@ div.card.below-jumbotron {
 
 div.jumbotron-overlay > div {
     color: #fff;
+    flex: 1;
 }
 
 div.jumbotron-overlay img.img-fluid {
