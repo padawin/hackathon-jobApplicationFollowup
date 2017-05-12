@@ -45,41 +45,30 @@
 </nav>
 
 <div class="container">
-    <div class="jumbotron" style="background-image: url(https://unsplash.it/1280/400/?random&blur);">
-        <div class="jumbotron-overlay">
-            <div class="row">
-                <div class="col col-md-4">
-                    <img src="http://pigment.github.io/fake-logos/logos/small/color/1.png" class="rounded img-fluid">
-                </div>
-                <div class="col">
-                    <h1>Software Developer</h1>
-                    <p><small>First posted on 12th May 2017</small></p>
+    <h1>Position Creation</h1>
+
+    <form class="card">
+        <div class="card-block">
+            <div class="form-group">
+                <label for="jobTitle">Job Title:</label>
+                <div class="input-group input-group-lg">
+                    <span class="input-group-addon"><i class="fa fa-user"></i></span>
+                    <input type="text" class="form-control form-control-lg" id="jobTitle" name="jobTitle"
+                           required>
                 </div>
             </div>
+            <div class="form-group">
+                <label for="jobDescription">Job Description:</label>
+                <div class="input-group textarea">
+                    <span class="input-group-addon"><i class="fa fa-info-circle"></i></span>
+                    <textarea class="form-control" id="jobDescription" name="jobDescription" rows="8"></textarea>
+                </div>
+            </div>
+            <div class="form-group">
+                <button type="submit" class="btn btn-primary">Submit</button>
+            </div>
         </div>
-    </div>
-    <div class="card below-jumbotron">
-        <div class="card-block">
-            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vivamus nisi erat, lobortis sed purus id,
-                vulputate iaculis turpis. Curabitur vehicula ornare felis dapibus ultricies. Sed pretium augue et
-                libero consectetur, vel sagittis turpis bibendum. Duis semper porta lectus quis convallis. Nulla
-                feugiat rhoncus convallis. Nam elementum sem in sem tincidunt, nec tristique eros fringilla. Ut nec
-                nibh auctor, porttitor ex ac, accumsan leo. Quisque accumsan ultricies sem in posuere. Cras
-                ultricies, felis ac accumsan fermentum, nulla tellus egestas nisi, et venenatis arcu elit a velit.
-                Fusce dictum faucibus nisl quis iaculis. Aliquam maximus pulvinar est.</p>
-        </div>
-
-        <div class="card-footer">
-            <ul class="nav nav-pills card-header-pills">
-              <li class="nav-item">
-                <a class="nav-link active" href="#">Apply?</a>
-              </li>
-              <li class="nav-item">
-                <a class="nav-link" href="#">Something Else</a>
-              </li>
-            </ul>
-        </div>
-    </div>
+    </form>
 
 </div>
 

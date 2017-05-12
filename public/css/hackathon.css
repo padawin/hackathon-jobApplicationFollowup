@@ -1,7 +1,83 @@
 body {
     padding-top: 100px;
+    padding-bottom: 5rem;
 }
 
 nav.navbar {
     background: #4475c4;
+}
+
+div.jumbotron {
+    padding: 0;
+    height: 400px;
+    background-position: bottom;
+    background-repeat: no-repeat;
+    background-size: cover;
+    position: relative;
+    margin-bottom: 0;
+}
+
+div.jumbotron-overlay {
+    background: rgba(37, 44, 75, 0.4);
+    border-top: 2px solid rgba(37, 44, 75, 0.4);
+    position: absolute;
+    width: 100%;
+    bottom: 0;
+    padding: 2rem 2.5rem;
+    display: flex;
+    align-items: flex-end;
+}
+
+div.card.below-jumbotron {
+    border-top: 0;
+    border-top-left-radius: 0;
+    border-top-right-radius: 0;
+}
+
+div.jumbotron-overlay > div {
+    color: #fff;
+}
+
+div.jumbotron-overlay img.img-fluid {
+    padding: 1rem;
+    margin: -1rem;
+    background: rgba(255,255,255,0.8);
+}
+
+form.card {
+    width: 80%;
+    margin: 0 auto;
+}
+
+label.custom-file {
+    display: block;
+}
+
+label.custom-file span.input-group-addon {
+    z-index: 1000;
+    border-right: 1px solid rgba(0,0,0,0.10);
+}
+
+label.custom-file .custom-file-control:lang(en)::after {
+    content: "Choose file...";
+    padding-left: 35px;
+}
+
+.textarea > .input-group-addon {
+    justify-content: flex-start;
+    padding-top: .75rem;
+}
+
+i.fa.fa-circle.pending {
+    color: #ff9229;
+}
+i.fa.fa-circle.approved {
+    color: #66b631;
+}
+i.fa.fa-circle.rejected {
+    color: #b60200;
+}
+i.fa.fa-circle.withdrawn {
+    color: #00b6a1;
+    opacity: 0.2;
 }
