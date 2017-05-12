@@ -64,17 +64,24 @@
     <script type="text/template" id="position-template">
         <tr data-row="{{JOB_POSITION_ID}}">
             <td>
-                <h3>{{POSITION_TITLE}}</h3>
-                <!--<p>
-                    <small>First posted on 12th May 2017</small>
-                </p>-->
+                <img src="http://pigment.github.io/fake-logos/logos/small/color/{{JOB_POSITION_ID}}.png" class="rounded img-fluid">
             </td>
             <td>
-                <a href="./job-position.html?id={{POSITION_ID}}" class="btn btn-primary">View</a>
-                <a href="./job-position-form.html?id={{POSITION_ID}}" class="btn btn-warning"><i class="fa fa-pencil"></i></a>
-                <a href="./job-position-delete.html?id={{POSITION_ID}}" class="btn btn-danger"><i class="fa fa-times"></i></a>
+                <h3>{{TITLE}} {?{is_new is_new_template}}</h3>
+                <p>
+                    <small>Posted on {{DATE_POSTED}}</small>
+                </p>
+            </td>
+            <td>
+                <a href="./job-position.html?id={{JOB_POSITION_ID}}" class="btn btn-primary">View</a>
+                <a href="./job-position-form.html?id={{JOB_POSITION_ID}}" class="btn btn-warning"><i class="fa fa-pencil"></i></a>
+                <a href="./job-position-delete.html?id={{JOB_POSITION_ID}}" class="btn btn-danger"><i class="fa fa-times"></i></a>
             </td>
         </tr>
+    </script>
+
+    <script type="text/template" id="is_new_template">
+ <span class="badge badge-success">New Position</span>
     </script>
 
     <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"
