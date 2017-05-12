@@ -7,14 +7,31 @@ nav.navbar {
     background: #4475c4;
 }
 
+td.status-cell {
+    font-size: 24px;
+    text-align: center;
+    width: 40px;
+    padding-right: 0;
+}
+
+td.logo-cell {
+    width: 150px;
+}
+
+td.button-cell {
+    width: 260px;
+    text-align: right;
+}
+
 div.jumbotron {
     padding: 0;
     height: 400px;
-    background-position: bottom;
-    background-repeat: no-repeat;
+    background: #3a5465 no-repeat bottom;
     background-size: cover;
     position: relative;
     margin-bottom: 0;
+    border-bottom-left-radius: 0;
+    border-bottom-right-radius: 0;
 }
 
 div.jumbotron-overlay {

@@ -48,13 +48,6 @@
         <h1>Available Positions</h1>
 
         <table class="table table-hover">
-            <thead style="visibility:hidden">
-            <tr>
-                <th style="width:150px;"></th>
-                <th>Position Information</th>
-                <th style="width:260px;"></th>
-            </tr>
-            </thead>
             <tbody id="positions-container">
             </tbody>
         </table>
@@ -63,19 +56,22 @@
 
     <script type="text/template" id="position-template">
         <tr data-row="{{JOB_POSITION_ID}}">
-            <td>
-                <img src="http://pigment.github.io/fake-logos/logos/small/color/{{JOB_POSITION_ID}}.png" class="rounded img-fluid">
+            <td class="logo-cell">
+                <img src="http://pigment.github.io/fake-logos/logos/small/color/{{JOB_POSITION_ID}}.png"
+                     class="rounded img-fluid">
             </td>
             <td>
                 <h3>{{TITLE}} {?{is_new is_new_template}}</h3>
-                <p>
-                    <small>Posted {{DATE_POSTED}}</small>
-                </p>
+                <p class="m-0"><small>Posted {{DATE_POSTED}}</small></p>
             </td>
-            <td>
+            <td class="button-cell">
                 <a href="./job-position-admin.html?id={{JOB_POSITION_ID}}" class="btn btn-primary">View</a>
-                <a href="./job-position-form.html?id={{JOB_POSITION_ID}}" class="btn btn-warning"><i class="fa fa-pencil"></i></a>
-                <a href="./job-position-delete.html?id={{JOB_POSITION_ID}}" class="btn btn-danger"><i class="fa fa-times"></i></a>
+                <a href="./job-position-form.html?id={{JOB_POSITION_ID}}" class="btn btn-warning">
+                    <i class="fa fa-pencil"></i>
+                </a>
+                <a href="./job-position-delete.html?id={{JOB_POSITION_ID}}" class="btn btn-danger">
+                    <i class="fa fa-times"></i>
+                </a>
             </td>
         </tr>
     </script>
