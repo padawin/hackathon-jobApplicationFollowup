@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <link rel="icon" href="favicon.ico">
+
+    <title>Hackathon Job Application Follow Up</title>
+
+    <link rel="stylesheet"
+          href="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/4.0.0-alpha.6/css/bootstrap.min.css"
+          integrity="sha256-rr9hHBQ43H7HSOmmNkxzQGazS/Khx+L8ZRHteEY1tQ4="
+          crossorigin="anonymous">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css"
+          integrity="sha256-eZrrJcwDc/3uDhsdt61sL2oOBY362qM3lon1gyExkL0="
+          crossorigin="anonymous">
+    <link href="css/hackathon.css" rel="stylesheet">
+</head>
+<body>
+<nav class="navbar navbar-toggleable-md navbar-inverse fixed-top">
+    <div class="container">
+        <button class="navbar-toggler navbar-toggler-right" type="button" data-toggle="collapse"
+                data-target="#navbarsExampleDefault">
+            <span class="navbar-toggler-icon"></span>
+        </button>
+        <a class="navbar-brand" href="#">Hackathon</a>
+
+        <div class="collapse navbar-collapse" id="navbarsExampleDefault">
+            <ul class="navbar-nav mr-auto">
+                <li class="nav-item active">
+                    <a class="nav-link" href="#">Home</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="#">Link</a>
+                </li>
+                <li class="nav-item dropdown">
+                    <a class="nav-link dropdown-toggle" href="#" id="dropdown01" data-toggle="dropdown">Dropdown</a>
+                    <div class="dropdown-menu">
+                        <a class="dropdown-item" href="#">Link</a>
+                        <a class="dropdown-item" href="#">Link</a>
+                    </div>
+                </li>
+            </ul>
+        </div>
+    </div>
+</nav>
+
+<div class="container">
+    <h1>Job Application</h1>
+
+    <form class="card">
+        <div class="card-block">
+            <div class="form-group">
+                <label for="candidateName">Candidate Name:</label>
+                <div class="input-group input-group-lg">
+                    <span class="input-group-addon"><i class="fa fa-user"></i></span>
+                    <input type="text" class="form-control form-control-lg" id="candidateName" name="candidateName"
+                           required>
+                </div>
+            </div>
+            <div class="form-group">
+                <label for="candidateEmail">Candidate Email:</label>
+                <div class="input-group">
+                    <span class="input-group-addon"><i class="fa fa-at"></i></span>
+                    <input type="email" class="form-control" id="candidateEmail" name="candidateEmail" required>
+                </div>
+            </div>
+            <div class="form-group">
+                <label for="candidateCv">Candidate CV:</label>
+                <label class="custom-file">
+                    <div class="input-group">
+                        <span class="input-group-addon"><i class="fa fa-file-text-o"></i></span>
+                        <input type="file" id="candidateCv" name="candidateCv" class="custom-file-input" required>
+                    </div>
+                    <span class="custom-file-control"></span>
+                </label>
+            </div>
+            <div class="form-group">
+                <button type="submit" class="btn btn-primary">Submit</button>
+            </div>
+        </div>
+    </form>
+
+</div>
+
+<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"
+        integrity="sha256-hwg4gsxgFZhOsEEamdOYGBf13FyQuiTwlAQgxVSNgt4="
+        crossorigin="anonymous"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/tether/1.4.0/js/tether.min.js"
+        integrity="sha384-DztdAPBWPRXSA/3eYEEUWrWCy7G5KFbe8fFjk5JAIxUYHKkDx6Qin1DkWx51bBrb"
+        crossorigin="anonymous"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/4.0.0-alpha.6/js/bootstrap.min.js"
+        integrity="sha256-+kIbbrvS+0dNOjhmQJzmwe/RILR/8lb/+4+PUNVW09k="
+        crossorigin="anonymous"></script>
+
+<script>
+    $(function () {
+        $('[data-toggle="tooltip"]').tooltip()
+    })
+</script>
+</body>
+</html>
