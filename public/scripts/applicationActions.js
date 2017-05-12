@@ -31,3 +31,13 @@ actions.acceptApplication = function (e) {
         window.location.reload();
     });
 };
+actions.withdrawApplication = function (e) {
+    e.preventDefault();
+    $.ajax({
+        method: "DELETE",
+        url: this.href
+    })
+    .done(function() {
+        window.location.reload();
+    });
+};

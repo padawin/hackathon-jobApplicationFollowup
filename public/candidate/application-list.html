@@ -56,8 +56,13 @@
             <p class="m-0"><small>at A Very Good Company</small></p>
         </td>
         <td class="button-cell">
-            <button type="button" class="btn btn-danger" data-toggle="tooltip" data-placement="top"
-                    title="Withdraw application"><i class="fa fa-times"></i></button>
+            <a
+                href="/api/positions/{{JOB_POSITION_ID}}/applications/{{APPLICATION_ID}}"
+                class="application-withdraw-button btn btn-danger" data-toggle="tooltip"
+                data-placement="top" title="Withdraw application"
+            >
+                <i class="fa fa-times"></i>
+            </a>
         </td>
     </tr>
 </script>
@@ -85,6 +90,7 @@
     })
 </script>
 <script type="text/javascript" src="/scripts/utils.js"></script>
+<script type="text/javascript" src="/scripts/applicationActions.js"></script>
 <script type="text/javascript" src="/scripts/applications-candidate.js"></script>
 </body>
 </html>

@@ -11,5 +11,7 @@
                 Utils.fillTemplate("application-template", application)
             );
         });
+
+        $(".application-withdraw-button").click(actions.withdrawApplication);
     });
 })();
