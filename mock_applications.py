@@ -5,6 +5,8 @@ from flask_restful import Resource
 
 from applications import Application, ApplicationStatus
 
+from notifications import notify_candidate
+
 mock_application_ids = count()
 mock_applications = {}
 
@@ -70,6 +72,8 @@ class Applications(Resource):
             return None, 404
 
         mock_applications[application_id].candidate_status = request.json['candidate_status']
+
+        notify_candidate(mock_applications[application_id])
 
         return mock_applications[application_id]
 
