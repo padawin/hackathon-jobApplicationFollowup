@@ -5,7 +5,10 @@
         return;
     }
 
-    $.get("/api/position/" + positionID, function(data) {
-        console.log(data);
+    $.get("/api/positions/" + positionID, function(position) {
+        position.date_posted = moment(position.date_posted).fromNow();
+        $("#position-container").append(
+            Utils.fillTemplate("position-template", position)
+        );
     });
 })();
