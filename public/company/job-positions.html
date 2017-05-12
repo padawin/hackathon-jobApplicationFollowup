@@ -14,6 +14,12 @@
           integrity="sha256-eZrrJcwDc/3uDhsdt61sL2oOBY362qM3lon1gyExkL0="
           crossorigin="anonymous">
     <link href="/css/hackathon.css" rel="stylesheet">
+
+    <script>
+        function hideImage(img) {
+            $(img).hide();
+        }
+    </script>
 </head>
 <body>
     <nav class="navbar navbar-toggleable-md navbar-inverse fixed-top">
@@ -33,7 +39,7 @@
     <script type="text/template" id="position-template">
         <tr data-row="{{JOB_POSITION_ID}}">
             <td class="logo-cell">
-                <img src="http://pigment.github.io/fake-logos/logos/small/color/{{JOB_POSITION_ID}}.png"
+                <img src="http://pigment.github.io/fake-logos/logos/small/color/{{IMAGE_ID}}.png"
                      class="rounded img-fluid">
             </td>
             <td>
@@ -42,7 +48,7 @@
             </td>
             <td class="button-cell">
                 <a href="./job-position.html?id={{JOB_POSITION_ID}}" class="btn btn-primary">View</a>
-                <a href="./job-position-form.html?id={{JOB_POSITION_ID}}" class="btn btn-warning">
+                <a href="#" class="btn btn-warning">
                     <i class="fa fa-pencil"></i>
                 </a>
                 <a
