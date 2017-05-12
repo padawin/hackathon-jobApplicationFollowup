@@ -76,14 +76,12 @@
             </div>
             <div class="card-footer">
                 <ul class="nav nav-pills card-header-pills">
-                  <li class="nav-item">
-                    <a id="position-withdraw-button"
-                       href="/api/positions/{{JOB_POSITION_ID}}"
-                       class="nav-link btn-danger"
-                    >
-                        Withdraw Position
-                    </a>
-                  </li>
+                    <li class="nav-item">
+                        <a id="position-withdraw-button" class="nav-link btn-danger"
+                           href="/api/positions/{{JOB_POSITION_ID}}">
+                           Withdraw Position
+                        </a>
+                    </li>
                 </ul>
             </div>
         </div>
@@ -106,16 +104,16 @@
 
     <script type="text/template" id="application-template">
         <tr data-row="{{APPLICATION_ID}}">
-            <td style="font-size: 24px">
+            <td class="status-cell">
                 {?{is_pending pending_indicator_template}}
                 {?{is_accepted accepted_indicator_template}}
                 {?{is_rejected rejected_indicator_template}}
             </td>
             <td>
                 <h3>{{CANDIDATE_NAME}}</h3>
-                <p><small>Submitted application {{DATE_APPLIED}}</small></p>
+                <p class="m-0"><small>Submitted application {{DATE_APPLIED}}</small></p>
             </td>
-            <td>
+            <td class="button-cell">
                 <button type="button" class="btn btn-primary" data-toggle="tooltip" data-placement="top"
                         title="View application"><i class="fa fa-eye"></i></button>
                 <button type="button" class="btn btn-danger" data-toggle="tooltip" data-placement="top"
