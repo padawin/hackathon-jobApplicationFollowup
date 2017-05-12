@@ -11,6 +11,8 @@
             Utils.fillTemplate("position-template", position)
         );
 
-        $("#position-withdraw-button").click(actions.deletePosition);
+        if ($("#position-withdraw-button").length) {
+            $("#position-withdraw-button").click(actions.deletePosition);
+        }
     });
 })();
