@@ -13,7 +13,7 @@
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css"
           integrity="sha256-eZrrJcwDc/3uDhsdt61sL2oOBY362qM3lon1gyExkL0="
           crossorigin="anonymous">
-    <link href="css/hackathon.css" rel="stylesheet">
+    <link href="/css/hackathon.css" rel="stylesheet">
 </head>
 <body>
     <nav class="navbar navbar-toggleable-md navbar-inverse fixed-top">
@@ -65,7 +65,7 @@
                 <p class="m-0"><small>Posted {{DATE_POSTED}}</small></p>
             </td>
             <td class="button-cell">
-                <a href="./job-position-admin.html?id={{JOB_POSITION_ID}}" class="btn btn-primary">View</a>
+                <a href="./job-position.html?id={{JOB_POSITION_ID}}" class="btn btn-primary">View</a>
                 <a href="./job-position-form.html?id={{JOB_POSITION_ID}}" class="btn btn-warning">
                     <i class="fa fa-pencil"></i>
                 </a>
@@ -104,8 +104,8 @@
             $('[data-toggle="tooltip"]').tooltip()
         })
     </script>
-    <script type="text/javascript" src="./scripts/utils.js"></script>
-    <script type="text/javascript" src="./scripts/positionDeletion.js"></script>
-    <script type="text/javascript" src="./scripts/jobPositions.js"></script>
+    <script type="text/javascript" src="/scripts/utils.js"></script>
+    <script type="text/javascript" src="/scripts/positionDeletion.js"></script>
+    <script type="text/javascript" src="/scripts/jobPositions.js"></script>
 </body>
 </html>

@@ -31,7 +31,7 @@ $('#position_form').submit(function(event) {
             contentType: 'application/json; charset=utf-8',
             dataType: 'json',
             success: function (response) {
-                window.location.href = '/job-position-admin.html?id=' + response.job_position_id
+                window.location.href = '/company/job-position-admin.html?id=' + response.job_position_id
             }
     });
 });
