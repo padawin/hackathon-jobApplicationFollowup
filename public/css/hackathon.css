@@ -24,3 +24,22 @@ label.custom-file .custom-file-control:lang(en)::after {
     content: "Choose file...";
     padding-left: 35px;
 }
+
+.textarea > .input-group-addon {
+    justify-content: flex-start;
+    padding-top: .75rem;
+}
+
+i.fa.fa-circle.pending {
+    color: #ff9229;
+}
+i.fa.fa-circle.approved {
+    color: #66b631;
+}
+i.fa.fa-circle.rejected {
+    color: #b60200;
+}
+i.fa.fa-circle.withdrawn {
+    color: #00b6a1;
+    opacity: 0.2;
+}
