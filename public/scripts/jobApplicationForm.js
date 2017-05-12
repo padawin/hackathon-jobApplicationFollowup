@@ -22,9 +22,8 @@ $('#application_form').submit(function(event) {
         application_id: 0,
         job_position_id: positionId,
         candidate_name: name,
-        //candidate_email: email,
+        candidate_email: email
         //candidate_cv: cv,
-        candidate_status: 'pending',
     };
 
     $.ajax({
