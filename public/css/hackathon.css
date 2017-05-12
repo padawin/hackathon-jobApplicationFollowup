@@ -5,3 +5,7 @@ body {
 nav.navbar {
     background: #4475c4;
 }
+
+.hidden {
+/*    display: none;*/
+}
