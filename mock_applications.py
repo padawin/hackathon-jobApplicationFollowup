@@ -14,10 +14,10 @@ mock_applications = {}
 class ApplicationsList(Resource):
     @staticmethod
     def get(job_position_id=None):
-        return [
+        return sorted((
             application for application in mock_applications.values()
             if application.job_position_id == job_position_id or job_position_id is None
-        ]
+        ), key=lambda application: application.date_applied, reverse=True)
 
     @staticmethod
     def post(job_position_id):
