@@ -29,11 +29,27 @@
 
 </div>
 
+<script type="text/template" id="pending_indicator_template">
+    <i class="fa fa-circle pending" data-toggle="tooltip" data-placement="top"
+       title="This application is pending review"></i>
+</script>
+
+<script type="text/template" id="accepted_indicator_template">
+    <i class="fa fa-circle approved" data-toggle="tooltip" data-placement="top"
+       title="This application is accepted"></i>
+</script>
+
+<script type="text/template" id="rejected_indicator_template">
+    <i class="fa fa-circle rejected" data-toggle="tooltip" data-placement="top"
+       title="This application is rejected"></i>
+</script>
+
 <script type="text/template" id="application-template">
     <tr data-row="1">
         <td class="status-cell">
-            <i class="fa fa-circle pending" data-toggle="tooltip" data-placement="top"
-               title="This application is pending review"></i>
+            {?{is_pending pending_indicator_template}}
+            {?{is_accepted accepted_indicator_template}}
+            {?{is_rejected rejected_indicator_template}}
         </td>
         <td>
             <h3>Software Developer</h3>
