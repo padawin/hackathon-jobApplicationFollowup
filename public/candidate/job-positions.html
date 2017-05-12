@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <link rel="icon" href="favicon.ico">
+
+    <title>Hackathon Job Application Follow Up</title>
+
+    <link rel="stylesheet"
+          href="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/4.0.0-alpha.6/css/bootstrap.min.css"
+          integrity="sha256-rr9hHBQ43H7HSOmmNkxzQGazS/Khx+L8ZRHteEY1tQ4="
+          crossorigin="anonymous">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css"
+          integrity="sha256-eZrrJcwDc/3uDhsdt61sL2oOBY362qM3lon1gyExkL0="
+          crossorigin="anonymous">
+    <link href="/css/hackathon.css" rel="stylesheet">
+</head>
+<body>
+    <nav class="navbar navbar-toggleable-md navbar-inverse fixed-top">
+        <div class="container" id="nav"></div>
+    </nav>
+
+    <div class="container">
+        <h1>Available Positions</h1>
+
+        <table class="table table-hover">
+            <tbody id="positions-container">
+            </tbody>
+        </table>
+
+    </div>
+
+    <script type="text/template" id="position-template">
+        <tr data-row="{{JOB_POSITION_ID}}">
+            <td class="logo-cell">
+                <img src="http://pigment.github.io/fake-logos/logos/small/color/{{IMAGE_ID}}.png"
+                     class="rounded img-fluid">
+            </td>
+            <td>
+                <h3>{{TITLE}} {?{is_new is_new_template}}</h3>
+                <p class="m-0"><small>Posted {{DATE_POSTED}}</small></p>
+            </td>
+            <td class="button-cell">
+                <a href="./job-position.html?id={{JOB_POSITION_ID}}" class="btn btn-primary">View</a>
+            </td>
+        </tr>
+    </script>
+
+    <script type="text/template" id="is_new_template">
+ <span class="badge badge-success">New Position</span>
+    </script>
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"
+            integrity="sha256-hwg4gsxgFZhOsEEamdOYGBf13FyQuiTwlAQgxVSNgt4="
+            crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/tether/1.4.0/js/tether.min.js"
+            integrity="sha384-DztdAPBWPRXSA/3eYEEUWrWCy7G5KFbe8fFjk5JAIxUYHKkDx6Qin1DkWx51bBrb"
+            crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/4.0.0-alpha.6/js/bootstrap.min.js"
+            integrity="sha256-+kIbbrvS+0dNOjhmQJzmwe/RILR/8lb/+4+PUNVW09k="
+            crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/moment.js/2.18.1/moment.min.js"
+            integrity="sha256-1hjUhpc44NwiNg8OwMu2QzJXhD8kcj+sJA3aCQZoUjg="
+            crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/moment.js/2.18.1/locale/en-gb.js"
+            integrity="sha256-aTgx0CTTED3qZtyezqOlG3e04BkBaEzWDwNT1O4TGVo="
+            crossorigin="anonymous"></script>
+
+    <script>
+        $("#nav").load("/include/header-candidate.html");
+        $(function () {
+            $('[data-toggle="tooltip"]').tooltip()
+        })
+    </script>
+    <script type="text/javascript" src="/scripts/utils.js"></script>
+    <script type="text/javascript" src="/scripts/positionDeletion.js"></script>
+    <script type="text/javascript" src="/scripts/jobPositions.js"></script>
+</body>
+</html>
