@@ -49,7 +49,7 @@ _mock_job_positions = [
         nibh auctor, porttitor ex ac, accumsan leo. Quisque accumsan ultricies sem in posuere. Cras
         ultricies, felis ac accumsan fermentum, nulla tellus egestas nisi, et venenatis arcu elit a velit.
         Fusce dictum faucibus nisl quis iaculis. Aliquam maximus pulvinar est.
-    """, datetime(2017, 5, 12), is_new=True)
+    """, datetime(2017, 5, 12))
 ]
 
 mock_job_positions = {
