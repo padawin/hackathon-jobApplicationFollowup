@@ -18,6 +18,10 @@ td.logo-cell {
     width: 150px;
 }
 
+td.logo-cell img {
+    width: calc(150px - 1.5em);
+}
+
 td.button-cell {
     width: 260px;
     text-align: right;
