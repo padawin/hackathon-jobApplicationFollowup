@@ -6,5 +6,7 @@
                 Utils.fillTemplate("position-template", position)
             );
         });
+
+        $(".position-withdraw-button").click(actions.deletePosition);
     });
 })();

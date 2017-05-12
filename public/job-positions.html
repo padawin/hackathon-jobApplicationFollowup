@@ -69,7 +69,10 @@
                 <a href="./job-position-form.html?id={{JOB_POSITION_ID}}" class="btn btn-warning">
                     <i class="fa fa-pencil"></i>
                 </a>
-                <a href="./job-position-delete.html?id={{JOB_POSITION_ID}}" class="btn btn-danger">
+                <a
+                    href="/api/positions/{{JOB_POSITION_ID}}"
+                    class="btn btn-danger position-withdraw-button"
+                >
                     <i class="fa fa-times"></i>
                 </a>
             </td>
@@ -102,6 +105,7 @@
         })
     </script>
     <script type="text/javascript" src="./scripts/utils.js"></script>
+    <script type="text/javascript" src="./scripts/positionDeletion.js"></script>
     <script type="text/javascript" src="./scripts/jobPositions.js"></script>
 </body>
 </html>

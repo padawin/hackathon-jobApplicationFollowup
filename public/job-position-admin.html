@@ -77,7 +77,12 @@
             <div class="card-footer">
                 <ul class="nav nav-pills card-header-pills">
                   <li class="nav-item">
-                    <a class="nav-link btn-danger" href="#">Withdraw Position</a>
+                    <a id="position-withdraw-button"
+                       href="/api/positions/{{JOB_POSITION_ID}}"
+                       class="nav-link btn-danger"
+                    >
+                        Withdraw Position
+                    </a>
                   </li>
                 </ul>
             </div>
@@ -141,6 +146,7 @@
         })
     </script>
     <script type="text/javascript" src="./scripts/utils.js"></script>
+    <script type="text/javascript" src="./scripts/positionDeletion.js"></script>
     <script type="text/javascript" src="./scripts/jobPosition.js"></script>
     <script type="text/javascript" src="./scripts/applications.js"></script>
 </body>
