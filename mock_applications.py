@@ -35,8 +35,12 @@ class ApplicationsList(Resource):
 
 class Applications(Resource):
     @staticmethod
+    def exists(job_position_id, application_id):
+        return application_id in mock_applications and mock_applications[application_id].job_position_id == job_position_id
+
+    @staticmethod
     def get(job_position_id, application_id):
-        if application_id not in mock_applications or mock_applications[application_id].job_position_id != job_position_id:
+        if not Applications.exists(job_position_id, application_id):
             return None, 404
 
         return mock_applications[application_id]
@@ -57,5 +61,5 @@ class Applications(Resource):
 
     @staticmethod
     def delete(job_position_id, application_id):
-        if application_id in mock_applications and mock_applications[application_id].job_position_id == job_position_id:
+        if Applications.exists(job_position_id, application_id):
             del mock_applications[application_id]
