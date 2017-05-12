@@ -24,64 +24,27 @@
     <h1>My Applications</h1>
 
     <table class="table table-hover">
-        <tbody>
-        <tr data-row="1">
-            <td class="status-cell">
-                <i class="fa fa-circle pending" data-toggle="tooltip" data-placement="top"
-                   title="This application is pending review"></i>
-            </td>
-            <td>
-                <h3>Software Developer</h3>
-                <p class="m-0"><small>at A Very Good Company</small></p>
-            </td>
-            <td class="button-cell">
-                <button type="button" class="btn btn-danger" data-toggle="tooltip" data-placement="top"
-                        title="Withdraw application"><i class="fa fa-times"></i></button>
-            </td>
-        </tr>
-        <tr data-row="2">
-            <td class="status-cell">
-                <i class="fa fa-circle rejected" data-toggle="tooltip" data-placement="top"
-                   title="This application has been rejected"></i>
-            </td>
-            <td>
-                <h3>Software Developer</h3>
-                <p class="m-0"><small>at A Very Good Company</small></p>
-            </td>
-            <td class="button-cell">
-                <button type="button" class="btn btn-danger" data-toggle="tooltip" data-placement="top"
-                        title="Withdraw application"><i class="fa fa-times"></i></button>
-            </td>
-        </tr>
-        <tr data-row="3">
-            <td class="status-cell">
-                <i class="fa fa-circle approved" data-toggle="tooltip" data-placement="top"
-                   title="This application is approved. Congratulations!"></i>
-            </td>
-            <td>
-                <h3>Software Developer</h3>
-                <p class="m-0"><small>at A Very Good Company</small></p>
-            </td>
-            <td class="button-cell">
-                <button type="button" class="btn btn-danger" data-toggle="tooltip" data-placement="top"
-                        title="Withdraw application"><i class="fa fa-times"></i></button>
-            </td>
-        </tr>
-        <tr data-row="4">
-            <td class="status-cell">
-                <i class="fa fa-circle withdrawn" data-toggle="tooltip" data-placement="top"
-                   title="This application has been withdrawn"></i>
-            </td>
-            <td>
-                <h3>Software Developer</h3>
-                <p class="m-0"><small>at A Very Good Company</small></p>
-            </td>
-            <td class="button-cell"></td>
-        </tr>
-        </tbody>
+        <tbody id="applications-container"></tbody>
     </table>
 
 </div>
+
+<script type="text/template" id="application-template">
+    <tr data-row="1">
+        <td class="status-cell">
+            <i class="fa fa-circle pending" data-toggle="tooltip" data-placement="top"
+               title="This application is pending review"></i>
+        </td>
+        <td>
+            <h3>Software Developer</h3>
+            <p class="m-0"><small>at A Very Good Company</small></p>
+        </td>
+        <td class="button-cell">
+            <button type="button" class="btn btn-danger" data-toggle="tooltip" data-placement="top"
+                    title="Withdraw application"><i class="fa fa-times"></i></button>
+        </td>
+    </tr>
+</script>
 
 <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"
         integrity="sha256-hwg4gsxgFZhOsEEamdOYGBf13FyQuiTwlAQgxVSNgt4="
@@ -92,6 +55,12 @@
 <script src="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/4.0.0-alpha.6/js/bootstrap.min.js"
         integrity="sha256-+kIbbrvS+0dNOjhmQJzmwe/RILR/8lb/+4+PUNVW09k="
         crossorigin="anonymous"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/moment.js/2.18.1/moment.min.js"
+        integrity="sha256-1hjUhpc44NwiNg8OwMu2QzJXhD8kcj+sJA3aCQZoUjg="
+        crossorigin="anonymous"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/moment.js/2.18.1/locale/en-gb.js"
+        integrity="sha256-aTgx0CTTED3qZtyezqOlG3e04BkBaEzWDwNT1O4TGVo="
+        crossorigin="anonymous"></script>
 
 <script>
     $("#nav").load("/include/header-candidate.html");
@@ -99,5 +68,7 @@
         $('[data-toggle="tooltip"]').tooltip()
     })
 </script>
+<script type="text/javascript" src="/scripts/utils.js"></script>
+<script type="text/javascript" src="/scripts/applications-candidate.js"></script>
 </body>
 </html>
