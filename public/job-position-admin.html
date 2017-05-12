@@ -46,6 +46,14 @@
 
     <div class="container">
         <div id="position-container"></div>
+
+        <hr>
+        <h2>Applications for this position</h2>
+
+        <table class="table table-hover">
+            <tbody id="applications-container">
+            </tbody>
+        </table>
     </div>
 
     <script type="text/template" id="position-template">
@@ -76,58 +84,39 @@
         </div>
     </script>
 
-    <script type="text/template" id="applications">
-        <hr>
-        <h2>Applications for this position</h2>
+    <script type="text/template" id="pending_indicator_template">
+        <i class="fa fa-circle pending" data-toggle="tooltip" data-placement="top"
+           title="This application is pending review"></i>
+    </script>
 
-        <table class="table table-hover">
-            <tbody>
-            <tr data-row="1">
-                <td style="font-size: 24px">
-                    <i class="fa fa-circle pending" data-toggle="tooltip" data-placement="top"
-                       title="This application is pending review"></i>
-                </td>
-                <td>
-                    <h3>Mr. P Jones</h3>
-                    <p><small>Submitted application 5 days ago</small></p>
-                </td>
-                <td>
-                    <button type="button" class="btn btn-primary" data-toggle="tooltip" data-placement="top"
-                            title="View application"><i class="fa fa-eye"></i></button>
-                    <button type="button" class="btn btn-danger" data-toggle="tooltip" data-placement="top"
-                            title="Reject application"><i class="fa fa-times"></i></button>
-                </td>
-            </tr>
-            <tr data-row="2">
-                <td style="font-size: 24px">
-                    <i class="fa fa-circle rejected" data-toggle="tooltip" data-placement="top"
-                       title="This application has been rejected"></i>
-                </td>
-                <td>
-                    <h3>Mrs. A Smith</h3>
-                    <p><small>Submitted application 5 days ago</small></p>
-                </td>
-                <td>
-                    <button type="button" class="btn btn-primary" data-toggle="tooltip" data-placement="top"
-                            title="View application"><i class="fa fa-eye"></i></button>
-                </td>
-            </tr>
-            <tr data-row="4">
-                <td style="font-size: 24px">
-                    <i class="fa fa-circle withdrawn" data-toggle="tooltip" data-placement="top"
-                       title="This application has been withdrawn"></i>
-                </td>
-                <td>
-                    <h3>Mr. J Brown</h3>
-                    <p><small>Submitted application 10 days ago</small></p>
-                </td>
-                <td>
-                    <button type="button" class="btn btn-primary" data-toggle="tooltip" data-placement="top"
-                            title="View application"><i class="fa fa-eye"></i></button>
-                </td>
-            </tr>
-            </tbody>
-        </table>
+    <script type="text/template" id="accepted_indicator_template">
+        <i class="fa fa-circle approved" data-toggle="tooltip" data-placement="top"
+           title="This application is accepted"></i>
+    </script>
+
+    <script type="text/template" id="rejected_indicator_template">
+        <i class="fa fa-circle rejected" data-toggle="tooltip" data-placement="top"
+           title="This application is rejected"></i>
+    </script>
+
+    <script type="text/template" id="application-template">
+        <tr data-row="{{APPLICATION_ID}}">
+            <td style="font-size: 24px">
+                {?{is_pending pending_indicator_template}}
+                {?{is_accepted accepted_indicator_template}}
+                {?{is_rejected rejected_indicator_template}}
+            </td>
+            <td>
+                <h3>{{CANDIDATE_NAME}}</h3>
+                <p><small>Submitted application {{DATE_SUBMIT}}</small></p>
+            </td>
+            <td>
+                <button type="button" class="btn btn-primary" data-toggle="tooltip" data-placement="top"
+                        title="View application"><i class="fa fa-eye"></i></button>
+                <button type="button" class="btn btn-danger" data-toggle="tooltip" data-placement="top"
+                        title="Reject application"><i class="fa fa-times"></i></button>
+            </td>
+        </tr>
     </script>
 
     <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"
@@ -153,5 +142,6 @@
     </script>
     <script type="text/javascript" src="./scripts/utils.js"></script>
     <script type="text/javascript" src="./scripts/jobPosition.js"></script>
+    <script type="text/javascript" src="./scripts/applications.js"></script>
 </body>
 </html>
