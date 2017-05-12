@@ -15,7 +15,17 @@ let Utils = (function () {
         }
     };
 
+    let fillTemplate = function (templateID, data) {
+        let html = $("#" + templateID).html();
+        for (field in data) {
+            html = html.replace("{{" + field.toUpperCase() + "}}", data[field]);
+        }
+
+        return $.parseHTML(html);
+    };
+
     Utils.getUrlParameter = getUrlParameter;
+    Utils.fillTemplate = fillTemplate;
 
     return Utils;
 })();
