@@ -1,9 +1,47 @@
 body {
     padding-top: 100px;
+    padding-bottom: 5rem;
 }
 
 nav.navbar {
     background: #4475c4;
+}
+
+div.jumbotron {
+    padding: 0;
+    height: 400px;
+    background-position: bottom;
+    background-repeat: no-repeat;
+    background-size: cover;
+    position: relative;
+    margin-bottom: 0;
+}
+
+div.jumbotron-overlay {
+    background: rgba(37, 44, 75, 0.4);
+    border-top: 2px solid rgba(37, 44, 75, 0.4);
+    position: absolute;
+    width: 100%;
+    bottom: 0;
+    padding: 2rem 2.5rem;
+    display: flex;
+    align-items: flex-end;
+}
+
+div.card.below-jumbotron {
+    border-top: 0;
+    border-top-left-radius: 0;
+    border-top-right-radius: 0;
+}
+
+div.jumbotron-overlay > div {
+    color: #fff;
+}
+
+div.jumbotron-overlay img.img-fluid {
+    padding: 1rem;
+    margin: -1rem;
+    background: rgba(255,255,255,0.8);
 }
 
 form.card {
