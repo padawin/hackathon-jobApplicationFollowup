@@ -26,10 +26,12 @@ td.button-cell {
 div.jumbotron {
     padding: 0;
     height: 400px;
-    background: no-repeat bottom;
+    background: #3a5465 no-repeat bottom;
     background-size: cover;
     position: relative;
     margin-bottom: 0;
+    border-bottom-left-radius: 0;
+    border-bottom-right-radius: 0;
 }
 
 div.jumbotron-overlay {
