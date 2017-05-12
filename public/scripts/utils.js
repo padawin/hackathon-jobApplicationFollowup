@@ -17,11 +17,15 @@ let Utils = (function () {
 
     let fillTemplate = function (templateID, data) {
         let html = $("#" + templateID).html();
+        if (html == undefined) {
+            throw "Template " + templateID + " not found";
+        }
+
         for (field in data) {
             html = html.split("{{" + field.toUpperCase() + "}}").join(data[field]);
         }
 
-        let reg = /{\?{([^\s]+) ([a-z_]+)}}/g;
+        let reg = /{\?{([^\s]+) ([a-z_]+)}}/;
         let match;
         while (match = reg.exec(html)) {
             if (data[match[1]]) {
