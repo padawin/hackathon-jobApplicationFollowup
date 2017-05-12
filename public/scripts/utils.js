@@ -21,6 +21,17 @@ let Utils = (function () {
             html = html.replace("{{" + field.toUpperCase() + "}}", data[field]);
         }
 
+        let reg = /{\?{([^\s]+) ([a-z_]+)}}/g;
+        let match;
+        while (match = reg.exec(html)) {
+            if (data[match[1]]) {
+                html = html.replace(match[0], $("#" + match[2]).html());
+            }
+            else {
+                html = html.replace(match[0], "");
+            }
+        }
+
         return $.parseHTML(html);
     };
 
