@@ -17,5 +17,8 @@
                 Utils.fillTemplate("application-template", application)
             );
         });
+
+        $(".position-reject-button").click(actions.rejectApplication);
+        $(".position-accept-button").click(actions.acceptApplication);
     });
 })();

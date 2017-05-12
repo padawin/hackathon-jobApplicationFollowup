@@ -92,8 +92,18 @@
             <td class="button-cell">
                 <button type="button" class="btn btn-primary" data-toggle="tooltip" data-placement="top"
                         title="View application"><i class="fa fa-eye"></i></button>
-                <button type="button" class="btn btn-danger" data-toggle="tooltip" data-placement="top"
-                        title="Reject application"><i class="fa fa-times"></i></button>
+                <a
+                    href="/api/positions/{{JOB_POSITION_ID}}/applications/{{APPLICATION_ID}}"
+                    class="btn btn-danger position-reject-button"
+                >
+                    <i class="fa fa-times"></i>
+                </a>
+                <a
+                    href="/api/positions/{{JOB_POSITION_ID}}/applications/{{APPLICATION_ID}}"
+                    class="btn btn-success position-accept-button"
+                >
+                    <i class="fa fa-check"></i>
+                </a>
             </td>
         </tr>
     </script>
@@ -121,8 +131,9 @@
         })
     </script>
     <script type="text/javascript" src="/scripts/utils.js"></script>
+    <script type="text/javascript" src="/scripts/applicationActions.js"></script>
     <script type="text/javascript" src="/scripts/positionDeletion.js"></script>
     <script type="text/javascript" src="/scripts/jobPosition.js"></script>
-    <script type="text/javascript" src="/scripts/applications.js"></script>
+    <script type="text/javascript" src="/scripts/applications-position.js"></script>
 </body>
 </html>

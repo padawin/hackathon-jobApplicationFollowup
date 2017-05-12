@@ -24,8 +24,9 @@ flask_mail.init_app(job_application_followup)
 api = Api(job_application_followup, '/api')
 api.add_resource(MockJobPositionsList, '/positions')
 api.add_resource(MockJobPositions, '/positions/<int:job_position_id>')
-api.add_resource(ApplicationsList, '/positions/<int:job_position_id>/applications')
+api.add_resource(ApplicationsList, '/positions/<int:job_position_id>/applications', endpoint='positionapplicationslist')
 api.add_resource(Applications, '/positions/<int:job_position_id>/applications/<int:application_id>')
+api.add_resource(ApplicationsList, '/applications')
 
 
 @job_application_followup.route('/')
