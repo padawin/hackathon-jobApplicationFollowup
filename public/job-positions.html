@@ -2,14 +2,180 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <title></title>
+    <link rel="icon" href="favicon.ico">
+
+    <title>Hackathon Job Application Follow Up</title>
+
+    <link rel="stylesheet"
+          href="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/4.0.0-alpha.6/css/bootstrap.min.css"
+          integrity="sha256-rr9hHBQ43H7HSOmmNkxzQGazS/Khx+L8ZRHteEY1tQ4="
+          crossorigin="anonymous">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css"
+          integrity="sha256-eZrrJcwDc/3uDhsdt61sL2oOBY362qM3lon1gyExkL0="
+          crossorigin="anonymous">
+    <link href="css/hackathon.css" rel="stylesheet">
 </head>
 <body>
-    <header>Job Applications manager</header>
-    <div>
-        <h1></h1>
+    <nav class="navbar navbar-toggleable-md navbar-inverse fixed-top">
+        <div class="container">
+            <button class="navbar-toggler navbar-toggler-right" type="button" data-toggle="collapse"
+                    data-target="#navbarsExampleDefault">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <a class="navbar-brand" href="#">Hackathon</a>
+
+            <div class="collapse navbar-collapse" id="navbarsExampleDefault">
+                <ul class="navbar-nav mr-auto">
+                    <li class="nav-item active">
+                        <a class="nav-link" href="#">Home</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#">Link</a>
+                    </li>
+                    <li class="nav-item dropdown">
+                        <a class="nav-link dropdown-toggle" href="#" id="dropdown01" data-toggle="dropdown">Dropdown</a>
+                        <div class="dropdown-menu">
+                            <a class="dropdown-item" href="#">Link</a>
+                            <a class="dropdown-item" href="#">Link</a>
+                        </div>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+
+    <div class="container">
+        <h1>Available Positions</h1>
+
+        <table class="table table-hover">
+            <thead style="visibility:hidden">
+            <tr>
+                <th style="width:150px;"></th>
+                <th>Position Information</th>
+                <th style="width:260px;"></th>
+            </tr>
+            </thead>
+            <tbody>
+            <tr data-row="1">
+                <td>
+                    <img src="http://pigment.github.io/fake-logos/logos/small/color/1.png" class="rounded img-fluid">
+                </td>
+                <td>
+                    <h3>Software Developer <span class="badge badge-success">New Position</span></h3>
+                    <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vivamus nisi erat, lobortis sed purus id,
+                        vulputate iaculis turpis. Curabitur vehicula ornare felis dapibus ultricies. Sed pretium augue et
+                        libero consectetur, vel sagittis turpis bibendum. Duis semper porta lectus quis convallis. Nulla
+                        feugiat rhoncus convallis. Nam elementum sem in sem tincidunt, nec tristique eros fringilla. Ut nec
+                        nibh auctor, porttitor ex ac, accumsan leo. Quisque accumsan ultricies sem in posuere. Cras
+                        ultricies, felis ac accumsan fermentum, nulla tellus egestas nisi, et venenatis arcu elit a velit.
+                        Fusce dictum faucibus nisl quis iaculis. Aliquam maximus pulvinar est.</p>
+                    <p>
+                        <small>First posted on 12th May 2017</small>
+                    </p>
+                </td>
+                <td>
+                    <button type="button" class="btn btn-primary">View</button>
+                    <button type="button" class="btn btn-warning" data-toggle="tooltip" data-placement="top"
+                            title="Edit this position"><i class="fa fa-pencil"></i></button>
+                    <button type="button" class="btn btn-danger" data-toggle="tooltip" data-placement="top"
+                            title="Delete this position"><i class="fa fa-times"></i></button>
+                </td>
+            </tr>
+            <tr data-row="2">
+                <td>
+                    <img src="http://pigment.github.io/fake-logos/logos/small/color/4.png" class="rounded img-fluid">
+                </td>
+                <td>
+                    <h3>Software Developer</h3>
+                    <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vivamus nisi erat, lobortis sed purus id,
+                        vulputate iaculis turpis. Curabitur vehicula ornare felis dapibus ultricies. Sed pretium augue et
+                        libero consectetur, vel sagittis turpis bibendum. Duis semper porta lectus quis convallis. Nulla
+                        feugiat rhoncus convallis. Nam elementum sem in sem tincidunt, nec tristique eros fringilla. Ut nec
+                        nibh auctor, porttitor ex ac, accumsan leo. Quisque accumsan ultricies sem in posuere. Cras
+                        ultricies, felis ac accumsan fermentum, nulla tellus egestas nisi, et venenatis arcu elit a velit.
+                        Fusce dictum faucibus nisl quis iaculis. Aliquam maximus pulvinar est.</p>
+                    <p>
+                        <small>First posted on 10th May 2017</small>
+                    </p>
+                </td>
+                <td>
+                    <button type="button" class="btn btn-primary">View</button>
+                    <button type="button" class="btn btn-warning" data-toggle="tooltip" data-placement="top"
+                            title="Edit this position"><i class="fa fa-pencil"></i></button>
+                    <button type="button" class="btn btn-danger" data-toggle="tooltip" data-placement="top"
+                            title="Delete this position"><i class="fa fa-times"></i></button>
+                </td>
+            </tr>
+            <tr data-row="3">
+                <td>
+                    <img src="http://pigment.github.io/fake-logos/logos/small/color/6.png" class="rounded img-fluid">
+                </td>
+                <td>
+                    <h3>Software Developer</h3>
+                    <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vivamus nisi erat, lobortis sed purus id,
+                        vulputate iaculis turpis. Curabitur vehicula ornare felis dapibus ultricies. Sed pretium augue et
+                        libero consectetur, vel sagittis turpis bibendum. Duis semper porta lectus quis convallis. Nulla
+                        feugiat rhoncus convallis. Nam elementum sem in sem tincidunt, nec tristique eros fringilla. Ut nec
+                        nibh auctor, porttitor ex ac, accumsan leo. Quisque accumsan ultricies sem in posuere. Cras
+                        ultricies, felis ac accumsan fermentum, nulla tellus egestas nisi, et venenatis arcu elit a velit.
+                        Fusce dictum faucibus nisl quis iaculis. Aliquam maximus pulvinar est.</p>
+                    <p>
+                        <small>First posted on 8th May 2017</small>
+                    </p>
+                </td>
+                <td>
+                    <button type="button" class="btn btn-primary">View</button>
+                    <button type="button" class="btn btn-warning" data-toggle="tooltip" data-placement="top"
+                            title="Edit this position"><i class="fa fa-pencil"></i></button>
+                    <button type="button" class="btn btn-danger" data-toggle="tooltip" data-placement="top"
+                            title="Delete this position"><i class="fa fa-times"></i></button>
+                </td>
+            </tr>
+            <tr data-row="4">
+                <td>
+                    <img src="http://pigment.github.io/fake-logos/logos/small/color/8.png" class="rounded img-fluid">
+                </td>
+                <td>
+                    <h3>Software Developer</h3>
+                    <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vivamus nisi erat, lobortis sed purus id,
+                        vulputate iaculis turpis. Curabitur vehicula ornare felis dapibus ultricies. Sed pretium augue et
+                        libero consectetur, vel sagittis turpis bibendum. Duis semper porta lectus quis convallis. Nulla
+                        feugiat rhoncus convallis. Nam elementum sem in sem tincidunt, nec tristique eros fringilla. Ut nec
+                        nibh auctor, porttitor ex ac, accumsan leo. Quisque accumsan ultricies sem in posuere. Cras
+                        ultricies, felis ac accumsan fermentum, nulla tellus egestas nisi, et venenatis arcu elit a velit.
+                        Fusce dictum faucibus nisl quis iaculis. Aliquam maximus pulvinar est.</p>
+                    <p>
+                        <small>First posted on 4th May 2017</small>
+                    </p>
+                </td>
+                <td>
+                    <button type="button" class="btn btn-primary">View</button>
+                    <button type="button" class="btn btn-warning" data-toggle="tooltip" data-placement="top"
+                            title="Edit this position"><i class="fa fa-pencil"></i></button>
+                    <button type="button" class="btn btn-danger" data-toggle="tooltip" data-placement="top"
+                            title="Delete this position"><i class="fa fa-times"></i></button>
+                </td>
+            </tr>
+            </tbody>
+        </table>
+
     </div>
-    <script type="text/javascript" src="https://code.jquery.com/jquery-3.1.1.min.js"></script>
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"
+            integrity="sha256-hwg4gsxgFZhOsEEamdOYGBf13FyQuiTwlAQgxVSNgt4="
+            crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/tether/1.4.0/js/tether.min.js"
+            integrity="sha384-DztdAPBWPRXSA/3eYEEUWrWCy7G5KFbe8fFjk5JAIxUYHKkDx6Qin1DkWx51bBrb"
+            crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/4.0.0-alpha.6/js/bootstrap.min.js"
+            integrity="sha256-+kIbbrvS+0dNOjhmQJzmwe/RILR/8lb/+4+PUNVW09k="
+            crossorigin="anonymous"></script>
+
+    <script>
+        $(function () {
+            $('[data-toggle="tooltip"]').tooltip()
+        })
+    </script>
     <script type="text/javascript" src="./scripts/jobPositions.js"></script>
 </body>
 </html>
