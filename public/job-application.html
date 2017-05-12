@@ -47,7 +47,7 @@
 <div class="container">
     <h1>Job Application</h1>
 
-    <form class="card">
+    <form id="application_form" method="post" class="card">
         <div class="card-block">
             <div class="form-group">
                 <label for="candidateName">Candidate Name:</label>
@@ -92,10 +92,12 @@
         integrity="sha256-+kIbbrvS+0dNOjhmQJzmwe/RILR/8lb/+4+PUNVW09k="
         crossorigin="anonymous"></script>
 
+    <script type="text/javascript" src="./scripts/utils.js"></script>
+    <script type="text/javascript" src="./scripts/jobApplicationForm.js"></script>
 <script>
     $(function () {
-        $('[data-toggle="tooltip"]').tooltip()
-    })
+        $('[data-toggle="tooltip"]').tooltip();
+    });
 </script>
 </body>
 </html>
