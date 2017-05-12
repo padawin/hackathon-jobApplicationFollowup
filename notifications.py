@@ -20,3 +20,5 @@ def notify_candidate(candidate):
         send_notification(candidate.candidate_email, "Congratulations, you've been accepted", "Woohoo!")
     elif candidate.candidate_status == ApplicationStatus.REJECTED:
         send_notification(candidate.candidate_email, "Sorry, you've been rejected", "Aww...")
+    elif candidate.candidate_status == ApplicationStatus.POSITION_CLOSED:
+        send_notification(candidate.candidate_email, "I'm sorry, the position has been closed", "Aww...")

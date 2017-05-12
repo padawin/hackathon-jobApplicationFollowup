@@ -6,6 +6,11 @@ from flask_restful import Resource
 
 from job_positions import JobPosition
 
+from applications import ApplicationStatus
+from mock_applications import mock_applications
+
+from notifications import notify_candidate
+
 mock_ids = count()
 
 _mock_job_positions = [
@@ -91,5 +96,20 @@ class MockJobPositions(Resource):
 
     @staticmethod
     def delete(job_position_id):
-        if job_position_id in mock_job_positions:
-            del mock_job_positions[job_position_id]
+        if job_position_id not in mock_job_positions:
+            return
+
+        del mock_job_positions[job_position_id]
+
+        candidates_to_delete = [
+            candidate for candidate in mock_applications.values()
+            if candidate.job_position_id == job_position_id
+        ]
+
+        for candidate in candidates_to_delete:
+            if candidate.candidate_status == ApplicationStatus.PENDING:
+                candidate.candidate_status = ApplicationStatus.POSITION_CLOSED
+
+                notify_candidate(candidate)
+
+            del mock_applications[candidate.application_id]

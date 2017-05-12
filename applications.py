@@ -5,6 +5,7 @@ class ApplicationStatus:
     PENDING = 'pending'
     REJECTED = 'rejected'
     ACCEPTED = 'accepted'
+    POSITION_CLOSED = 'position_closed'
 
 
 class Application:
