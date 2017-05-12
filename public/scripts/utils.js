@@ -25,7 +25,7 @@ let Utils = (function () {
             html = html.split("{{" + field.toUpperCase() + "}}").join(data[field]);
         }
 
-        let reg = /{\?{([^\s]+) ([a-z_]+)}}/g;
+        let reg = /{\?{([^\s]+) ([a-z_]+)}}/;
         let match;
         while (match = reg.exec(html)) {
             if (data[match[1]]) {
