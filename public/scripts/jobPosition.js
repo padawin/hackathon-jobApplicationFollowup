@@ -6,6 +6,7 @@
     }
 
     $.get("/api/positions/" + positionID, function(position) {
+        position.image_id = (position.job_position_id + 1);
         position.date_posted = moment(position.date_posted).fromNow();
         $("#position-container").append(
             Utils.fillTemplate("position-template", position)
