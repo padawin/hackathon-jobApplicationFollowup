@@ -1,5 +1,9 @@
 (function () {
     $.get("/api/positions", function(data) {
-        console.log(data);
+        data.forEach(function(position) {
+            $("#positions-container").append(
+                Utils.fillTemplate("position-template", position)
+            );
+        });
     });
 })();
